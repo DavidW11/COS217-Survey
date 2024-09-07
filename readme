@@ -3,7 +3,7 @@ Assignment 0 readme File
 ------------------------------------------------------------------------
 What is your name?
 
-
+David Wang
 
 ------------------------------------------------------------------------
 What authorized sources of information did you use to complete the
@@ -12,7 +12,18 @@ in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. 
+Such documents include the course's lecture slides and precept handouts:
+https://mywiki.wooledge.org/BashGuide/Patterns
+https://swcarpentry.github.io/shell-novice/aio.html
+
+The course's textbooks and reference manuals.
 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
@@ -26,7 +37,7 @@ interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
 
-
+None
 
 ------------------------------------------------------------------------
 In fulfillment of the requirement from section 2.4.3 of the Academic
@@ -36,26 +47,37 @@ enter your name in the space below the following affirmation:
 This paper represents my own work in accordance with University
 regulations.
 
-
+David Wang
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
 
-
+This assignment was very helpful in setting up the armlab environment
+and getting familiar with the interactions between different git
+repositories on the cloud, the armlab computers, and my local machine.
+I also learned a lot about how to use bash to manipulate files and
+directories, as well as how to use variables, loops, pipelines, 
+globs, and brace expansion. 
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
 will help your grader to grade it in the most favorable light? In
 particular, what bugs are in your submission?
 
-
+I did not find any bugs in my submission. My strategy for 
+generating the files in step 3.2 was to loop through both the 
+number of rounds (11) and the whole alphabet (a through z),
+naming the txt files using the round number followed by the letter to
+ensure that bash will glob these files in the desired order.
 
 ------------------------------------------------------------------------
 What bash command(s) did you use to generate the files in Step 3.2?
 
-
+for round in {1..11}; do for letter in {a..z}; do echo $letter > ${round}${letter}.txt;
+    done
+cat *.txt > cat.txt
 
 ------------------------------------------------------------------------
 What is your resulting MD5 checksum from Step 3.3 (NOT 3.2!)?
 
-MD5:
+MD5: edeb05bbab295af01f985476066702f3
